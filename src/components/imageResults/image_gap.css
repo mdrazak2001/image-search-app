@@ -1,0 +1,126 @@
+.my-masonry-grid {
+  display: flex;
+  margin-left: -16px; /* gutter size offset */
+  width: auto;
+}
+
+.my-masonry-grid_column {
+  padding-left: 16px; /* gutter size */
+  background-clip: padding-box;
+}
+.masonryImage:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Style the Image Used to Trigger the Modal */
+.myImg {
+  cursor: pointer;
+  z-index: -1;
+  transition: 0.3s;
+}
+
+.myImg:hover {
+  box-shadow: 0 0 13px rgba(0, 0, 0, 0.8);
+  transform: scale(1.05);
+}
+
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 40%;
+  max-width: 90vw;
+  padding-bottom: 20px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 40%;
+  max-width: 700px;
+  text-align: center;
+  font-size: 3vh;
+  color: #ccc;
+  padding: 10px 0;
+  height: 500px;
+}
+@media (max-width: 600px) {
+  #caption {
+    margin-bottom: 800px;
+  }
+}
+
+/* The Close Button */
+.x-close {
+  position: absolute;
+  top: 5vh;
+  right: 5vh;
+  color: #f1f1f1;
+  font-size: 2.3rem;
+  font-weight: bold;
+  transition: 0.3s;
+  /* background-color: rgb(255, 255, 255); */
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+    color: greenyellow;
+  }
+}
+
+.x-close:hover,
+.x-close:focus {
+  animation: 1s spin;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* The Modal (background) */
+.img-modal {
+  z-index: -1;
+  display: block; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+}
+
+.avatar {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.tag {
+  display: inline-block;
+  padding: 4px 8px;
+  background-color: #e0e0e0;
+  color: #000000;
+  border-radius: 4px;
+  margin-right: 10px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: rgb(248, 246, 246);
+}
